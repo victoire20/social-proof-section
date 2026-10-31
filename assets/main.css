@@ -1,0 +1,250 @@
+:root {
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: 80px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    color: var(--dark-grayish-magenta);
+    background-color: var(--white);
+    background-image:
+        url("./images/bg-pattern-top-mobile.svg"),
+        url("./images/bg-pattern-bottom-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
+    font-family: "League Spartan", sans-serif;
+    font-size: 15px;
+}
+
+.container {
+    width: min(100%, 1110px);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.content-message-title {
+    max-width: 360px;
+    margin: 0 auto;
+    color: var(--very-dark-magenta);
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 0.9;
+    letter-spacing: -1.5px;
+}
+
+.content-message p {
+    margin-top: 24px;
+    line-height: 1.5;
+}
+
+.content-notes {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    margin-top: 48px;
+}
+
+.content-notes-badge {
+    min-height: 77px;
+    padding: 14px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 8px;
+    background: var(--light-grayish-magenta);
+}
+
+.stars {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.stars img {
+    width: 17px;
+    height: 16px;
+}
+
+.content-notes-badge p {
+    color: var(--very-dark-magenta);
+    font-weight: 700;
+}
+
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.card {
+    max-height: 248px;
+    padding: 24px;
+    border-radius: 8px;
+    background: var(--very-dark-magenta);
+    color: var(--white);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+.card-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.customer-fullname {
+    font-weight: 700;
+}
+
+.customer-status {
+    margin-top: 4px;
+    color: var(--soft-pink);
+}
+
+.card-body {
+    line-height: 1.45;
+}
+
+.attribution {
+    text-align: center;
+    color: var(--soft-pink);
+    font-size: 10px;
+}
+
+.attribution a {
+    color: var(--dark-grayish-magenta);
+    text-decoration: none;
+}
+
+.attribution a:hover {
+    color: var(--very-dark-magenta);
+    text-decoration: underline;
+}
+
+@media (min-width: 1100px) {
+    body {
+        padding: 48px;
+        justify-content: center;
+        background-image:
+            url("./images/bg-pattern-top-desktop.svg"),
+            url("./images/bg-pattern-bottom-desktop.svg");
+    }
+
+    .content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 80px;
+        text-align: left;
+    }
+
+    .content-message {
+        width: 40%;
+    }
+
+    .content-message-title {
+        max-width: 440px;
+        margin: 0;
+        font-size: 56px;
+        letter-spacing: -2px;
+    }
+
+    .content-message p {
+        max-width: 445px;
+        margin-top: 24px;
+        font-size: 17px;
+        line-height: 1.4;
+    }
+
+    .content-notes {
+        width: 48.5%;
+        margin-top: 0;
+    }
+
+    .content-notes-badge {
+        width: 445px;
+        min-height: 56px;
+        padding: 16px 30px;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 30px;
+    }
+
+    .content-notes-badge:nth-child(2) {
+        align-self: center;
+    }
+
+    .content-notes-badge:nth-child(3) {
+        align-self: flex-end;
+    }
+
+    .stars {
+        gap: 8px;
+    }
+
+    .testimonials {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    footer {
+        margin-top: 48px;
+    }
+
+    .card {
+        min-width: 0;
+        min-height: 234px;
+        flex: 1;
+        padding: 40px 32px 32px;
+    }
+
+    .card:nth-child(2) {
+        transform: translateY(16px);
+    }
+
+    .card:nth-child(3) {
+        transform: translateY(32px);
+    }
+}
+
+@media (max-width: 360px) {
+    body {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .content-message-title {
+        font-size: 36px;
+    }
+
+    .card {
+        padding: 24px 20px;
+    }
+}
